@@ -19,7 +19,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "ts",
       "styles": [
-        "styles.scss"
+        "styles.scss",
+      "../node_modules/fullpage.js/dist/jquery.fullpage.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
