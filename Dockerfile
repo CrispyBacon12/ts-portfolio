@@ -4,7 +4,13 @@ ENV HOME=/usr/src/app
 RUN mkdir $HOME
 WORKDIR $HOME
 
-RUN npm install -g --unsafe-perm @angular/cli
+# Install app dependencies
+COPY package.json /usr/src/app/
+RUN npm install
+
+# Bundle app source
+COPY . /usr/src/app
 
 EXPOSE 4200
-EXPOSE 49153
+
+CMD [ "npm", "start" ]
